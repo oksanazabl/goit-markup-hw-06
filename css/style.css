@@ -918,3 +918,9 @@ a.accent::after {
   visibility: hidden;
   pointer-events: none;
 }
+
+.modal-form-label {
+}
+
+.modal-form-input {
+}
