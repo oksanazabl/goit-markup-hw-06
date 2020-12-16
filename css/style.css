@@ -277,9 +277,10 @@ a.accent::after {
   display: flex;
   flex-direction: column;
   margin-top: 12px;
+  margin-right: 93px;
 }
 
-.follow-us {
+.follow-mailing {
   color: var(--txt-light);
   font-style: normal;
   font-weight: bold;
@@ -316,6 +317,9 @@ a.accent::after {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   margin-right: 12px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .mailing-box .btn {
