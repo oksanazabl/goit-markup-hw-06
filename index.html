@@ -438,16 +438,13 @@
             <!--add mailing-->
             <div class="mailing-box">
                 <span class="follow-mailing">Подпишитесь на рассылку</span>
-                <div class="form">
-                    <label class="mailing-label">
-                        <input type="email" name="email" class="mailing-input" placeholder="Email" />
-                    </label>
-
+                <form class="form-contact mailing-label">
+                    <input type="email" name="email" class="mailing-input" placeholder="Email" />
                     <button type="submit" class="btn">Подписаться</button>
                     <svg class="icon-send-fly" width="24" height="24">
                         <use href="./images/sprite.svg#icon-send-fly"></use>
                     </svg>
-                </div>
+                </form>
             </div>
         </div>
     </footer>
@@ -459,20 +456,41 @@
                     <use href="./images/sprite.svg#icon-close-black"></use>
                 </svg>
             </button>
-            <form action="" method="">
-                <!--label class="modal-form-label">
+            <div class="feedback-form">
+                <span class="modal-form-title">Оставьте свои данные, мы вам перезвоним</span>
+                <form class="modal-form">
+                    <div class="form-fild">
+                        <label for="name" class="form-fild-title">Имя</label>
+                        <input type="text" name="name" id="name" class="form-fild-input" />
+                    </div>
 
-                    <input type="email" name="email" class="modal-form-input"
-                        href="./images/sprite.svg#icon-person-sheet" />
-                </label-->
-                <label for="message">
-                    <input type="text" id="message" placeholder="url(./images/sprite.svg#icon-person-sheet)" />
-                </label>
-                <!--textarea>
+                    <div class="form-fild">
+                        <label for="phone" class="form-fild-title">Телефон</label>
+                        <input type="tel" name="phone" id="phone" class="form-fild-input" />
+                    </div>
 
-                </textarea>
-                <button type="submit">Отправить</button-->
-            </form>
+                    <div class="form-fild">
+                        <label for="email" class="form-fild-title">Почта</label>
+                        <input type="email" name="email" id="email" class="form-fild-input" />
+                    </div>
+
+                    <div class="form-fild">
+                        <label for="comment" class="form-fild-title">Комментарий</label>
+                        <textarea name="comment" id="comment" placeholder="Введите текст"
+                            class="form-fild-comment"></textarea>
+                    </div>
+
+                    <div class="form-policy">
+                        <input type="checkbox" name="policy" id="policy" class="policy-point-fild" />
+                        <label for="policy" class="form-fild-policy">Соглашаюсь с рассылкой и принимаю
+                            <a class="form-contract">Условия договора</a>
+                        </label>
+                    </div>
+
+
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
         </div>
     </div>
 
