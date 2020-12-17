@@ -345,8 +345,6 @@ a.accent::after {
 /*=========== Hero ===========*/
 
 .hero {
-  background-color: var(--b-dark);
-
   min-height: 600px;
   /*
   padding-top: 207px;
@@ -358,6 +356,7 @@ a.accent::after {
 }
 
 .hero .container {
+  background-color: var(--b-dark);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
