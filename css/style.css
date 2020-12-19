@@ -928,6 +928,12 @@ a.accent::after {
   margin: 40px;
 }
 
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .modal-form-title {
   display: flex;
   margin-bottom: 12px;
@@ -993,10 +999,16 @@ a.accent::after {
 }
 
 .form-contract {
-  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  text-decoration: underline;
   color: var(--b-blue);
 }
 
 .policy-point-fild {
   margin-right: 8px;
+}
+
+.modal-form-btn {
+  width: 200px;
+  height: 50px;
 }
