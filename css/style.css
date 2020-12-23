@@ -323,6 +323,12 @@ a.accent::after {
   padding-bottom: 15px;
 }
 
+.mailing-input:focus {
+  outline: none;
+  color: var(--txt-grey);
+  border: 1px solid var(--b-middle);
+}
+
 .mailing-box .btn {
   display: flex;
   width: 200px;
@@ -858,15 +864,15 @@ a.accent::after {
   padding: 63px 24px;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: 100%;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(0);
   transition: transform 250ms var(--timer);
 }
 
 .ecxample-card:hover .overlay,
 .ecxample-card:focus .overlay {
-  transform: translateY(0);
+  transform: translateY(-100%);
 }
 
 /* =============== BACKDROP ===============*/
@@ -993,7 +999,7 @@ a.accent::after {
   transform: translateY(-50%);
   left: 12px;
 
-  transition: fill 250s var(--timer);
+  transition: fill 250ms var(--timer);
 }
 
 .form-fild-comment {
@@ -1011,6 +1017,12 @@ a.accent::after {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+
+.form-fild-comment:focus {
+  color: var(--txt-dark);
+  outline: none;
+  border: solid 1px var(--accent-background);
 }
 
 .form-policy {
