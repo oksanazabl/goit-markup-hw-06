@@ -438,9 +438,9 @@
             <!--add mailing-->
             <div class="mailing-box">
                 <span class="follow-mailing">Подпишитесь на рассылку</span>
-                <form class="form-contact mailing-label">
+                <form class="form-contact">
                     <input type="email" name="email" class="mailing-input" placeholder="Email" />
-                    <button type="submit" class="btn">Подписаться</button>
+                    <button type="submit" class="btn btn-follow-mailing">Подписаться</button>
                     <svg class="icon-send-fly" width="24" height="24">
                         <use href="./images/sprite.svg#icon-send-fly"></use>
                     </svg>
@@ -493,12 +493,13 @@
                             class="form-fild-comment"></textarea>
                     </label>
 
-                    <div class="form-policy">
-                        <input type="checkbox" name="policy" id="policy" class="policy-point-fild" />
-                        <label for="policy" class="form-fild-policy">Соглашаюсь с рассылкой и принимаю
-                            <a href="#" class="form-contract">Условия договора</a>
-                        </label>
-                    </div>
+
+                    <input type="checkbox" name="policy" value="accept policy" id="policy"
+                        class="policy-point-fild visually-hidden" />
+                    <label for="policy" class="form-fild-policy">Соглашаюсь с рассылкой и принимаю
+                        <a href="#" class="form-contract">Условия договора</a>
+                    </label>
+
 
 
                     <button type="submit" class="btn modal-form-btn">Отправить</button>
