@@ -3,6 +3,7 @@
   --b-dark: #2f303a;
   --b-middle: #f5f4fa;
   --b-blue: #2196f3;
+  --b-white: #ffffff;
   /*text color*/
   --txt-dark: #212121;
   --txt-grey: #757575;
@@ -747,6 +748,7 @@ a.accent::after {
   color: var(--txt-light);
   border: none;
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transform: opasity;
 }
@@ -756,6 +758,7 @@ a.accent::after {
   color: var(--txt-light);
   border: none;
   outline: 1px solid #757575;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transform: opasity;
 }
@@ -892,10 +895,15 @@ a.accent::after {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
+
   transform: translate(-50%, -50%) scale(1);
   width: 528px;
   min-height: 581px;
-  background-color: #fff;
+  background-color: var(--b-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
   transition: transform 250ms var(--timer);
 }
@@ -925,7 +933,6 @@ a.accent::after {
   flex-direction: column;
   justify-content: center;
   width: 448px;
-  margin: 40px;
 }
 
 .modal-form {
@@ -945,27 +952,48 @@ a.accent::after {
   color: var(--b-dark);
 }
 
-.form-fild {
-  display: flex;
-  flex-direction: column;
-}
-
 .form-fild-title {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--txt-grey);
-  margin-bottom: 4px;
+}
+
+.modal-form-holder {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 4px;
 }
 
 .form-fild-input {
   width: 448px;
   height: 40px;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 10px;
+}
+
+.form-fild-input:focus {
+  outline: none;
+  border: solid 1px var(--accent-background);
+}
+
+.form-fild-input:focus + .madal-form-icon {
+  fill: var(--accent-background);
+}
+
+.madal-form-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+
+  transition: fill 250s var(--timer);
 }
 
 .form-fild-comment {
@@ -975,6 +1003,7 @@ a.accent::after {
   box-sizing: border-box;
   border-radius: 4px;
   padding: 12px 16px;
+  margin-top: 4px;
   margin-bottom: 20px;
   font-weight: normal;
   font-size: 12px;
@@ -1011,4 +1040,13 @@ a.accent::after {
 .modal-form-btn {
   width: 200px;
   height: 50px;
+  color: var(--txt-light);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: color 250ms var(--timer);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  cursor: pointer;
+  outline: none;
 }
